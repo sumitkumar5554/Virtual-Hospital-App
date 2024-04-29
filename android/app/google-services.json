@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "80355689045",
+    "project_id": "fluttervirtualhospital",
+    "storage_bucket": "fluttervirtualhospital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80355689045:android:50595bc25709e1e1288adc",
+        "android_client_info": {
+          "package_name": "com.example.virtual_swaahth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6hRt4w4aJ5Da9qYTo0cC1YTqQtjeWQNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
