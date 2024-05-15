@@ -8,7 +8,6 @@ import 'package:virtual_swaahth/screens/prescription_service.dart';
 import 'package:virtual_swaahth/widgets/video_call.dart';
 
 class AppointmentScreen extends StatelessWidget {
-
   List imgs = [
     "doctor1.jpg",
     "doctor2.jpg",
@@ -28,36 +27,37 @@ class AppointmentScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pop(context);
                   },
                   child: Icon(
-                    Icons.arrow_back_ios_new,       // arrow of back icon
+                    Icons.arrow_back_ios_new, // arrow of back icon
                     color: Colors.white,
                     size: 25,
                   ),
                 ),
                 InkWell(
-                  onTap: (){
-
-                  },
+                  onTap: () {},
                   child: Icon(
-                    Icons.more_vert,       // three dot icon
+                    Icons.more_vert, // three dot icon
                     color: Colors.white,
                     size: 25,
                   ),
                 ),
               ],
             ),
-            Padding(padding: EdgeInsets.symmetric(vertical: 10),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CircleAvatar(radius: 35,
+                  CircleAvatar(
+                    radius: 35,
                     backgroundImage: AssetImage("images/doctor1.jpg"),
                   ),
                   SizedBox(height: 15),
-                  Text("Dr. Arun Ghosi",
+                  Text(
+                    "Dr. Arun Ghosi",
                     style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.w500,
@@ -65,7 +65,8 @@ class AppointmentScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 5),
-                  Text("Therapist",
+                  Text(
+                    "Therapist",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -76,20 +77,20 @@ class AppointmentScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => CallScreen()
-                          ));
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CallScreen()));
                         },
                         child: Container(
-
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Colors.green.shade700,
                             shape: BoxShape.circle,
                           ),
-
-                          child: Icon(     //call icon
+                          child: Icon(
+                            //call icon
                             Icons.call,
                             color: Colors.white,
                             size: 25,
@@ -98,10 +99,11 @@ class AppointmentScreen extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       GestureDetector(
-                        onTap:(){
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => VideoCallScreen()
-                          ));
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyApp()));
                         },
                         child: Container(
                           padding: EdgeInsets.all(10),
@@ -109,14 +111,12 @@ class AppointmentScreen extends StatelessWidget {
                             color: Colors.redAccent.shade700,
                             shape: BoxShape.circle,
                           ),
-
-                          child: Icon(     //call icon
-                            CupertinoIcons.video_camera, // bubble msg icon manage
+                          child: Icon(
+                            CupertinoIcons.video_camera,
+                            // bubble msg icon manage
                             color: Colors.white,
                             size: 25,
-
                           ),
-
                         ),
                       ),
                     ],
@@ -125,22 +125,22 @@ class AppointmentScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // code of new sizebox here
             Container(
-              height: MediaQuery.of(context).size.height /1.5,
+              height: MediaQuery.of(context).size.height / 1.5,
               width: double.infinity,
               padding: EdgeInsets.only(
                 top: 20,
                 left: 15,
               ),
               decoration: BoxDecoration(
-                color: Colors.deepPurple.shade100,
+                color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
                 ),
               ),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
@@ -150,77 +150,82 @@ class AppointmentScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-SizedBox(height: 5),
-Text("Hi I am MBBS specialist and I have 10 years of Experience in Medical feild",
-  style: TextStyle(
-    fontSize:16,color: Colors.black54,
-          ),
-         ),
+                  SizedBox(height: 5),
+                  Text(
+                    "Hi I am MBBS specialist and I have 10 years of Experience in Medical field",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black54,
+                    ),
+                  ),
                   SizedBox(height: 10),
                   Row(
                     children: [
                       Text(
                         "Reviews",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                      ),
-
-                      SizedBox(height: 10),  // Rating of Review
-                      Icon(Icons.star,color: Colors.amber),
-                      Text("4.9",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500),
+                      SizedBox(height: 10), // Rating of Review
+                      Icon(Icons.star, color: Colors.amber),
+                      Text(
+                        "4.9",
+                        style: TextStyle(fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 5),
-                      Text("(124)",
+                      Text(
+                        "(124)",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                        color: Colors.purple.shade700),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Colors.purple.shade700,
+                        ),
                       ),
-                      Spacer(),  // spacer align next widget to the end of row
+                      Spacer(), // spacer align next widget to the end of row
                       TextButton(
-                          onPressed: (){},
-                          child: Text("See all",
+                        onPressed: () {},
+                        child: Text(
+                          "See all",
                           style: TextStyle(
-                           fontWeight: FontWeight.w500,
-                           fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
                             color: Colors.purple.shade700,
                           ),
-                          ),
+                        ),
                       ),
                     ],
                   ),
-                  SizedBox(     // here is the code of 4 item count
+                  SizedBox(
                     height: 160,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                    itemCount: 4,
-                    itemBuilder: (context, index){
-                        return Container(
-                          margin: EdgeInsets.symmetric(vertical: 5),
-                          decoration: BoxDecoration(
-                              color: Colors.deepPurple.shade100,
-                            borderRadius: BorderRadius.circular(15),
-                           boxShadow: [
-                           BoxShadow(
-                             color: Colors.blueGrey.shade900,
-                             blurRadius: 4,
-                             spreadRadius: 2,
-                           ),
-                           ],
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 4,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: EdgeInsets.symmetric(vertical: 5),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.blueGrey.shade900,
+                                  blurRadius: 4,
+                                  spreadRadius: 2,
+                                ),
+                              ],
                             ),
-                          child: SizedBox(
-                            width: MediaQuery.of(context).size.width  /1.4,
+                            width: MediaQuery.of(context).size.width / 1.4,
                             child: Column(
                               children: [
                                 ListTile(
                                   leading: CircleAvatar(
                                     radius: 25,
-                                    backgroundImage:
-                                    AssetImage("images/${imgs[index]}"), // here is the icon of code here
+                                    backgroundImage: AssetImage(
+                                        "images/${imgs[index]}"), // here is the icon of code here
                                   ),
                                   title: Text(
                                     "Dr. Priya Tiwari",
@@ -237,115 +242,79 @@ Text("Hi I am MBBS specialist and I have 10 years of Experience in Medical feild
                                         Icons.star,
                                         color: Colors.amber,
                                       ),
-                                      Text("4.9",
-                                      style: TextStyle(
-                                        color: Colors.black54,
-                                      ),),
+                                      Text(
+                                        "4.9",
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
                                 SizedBox(height: 5), // Sizebox for review comnt
                                 Padding(
-                                    padding: EdgeInsets.symmetric(horizontal: 10),
-                                child: Text("Many thanks to Dr. Priya . She is a great and professional doctor",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                ),),
-                                // child: Text(
-                                //   maxLines:2, // use for line limitation
-                                //   overflow: TextOverflow.ellipsis,
-                                //   "Many thanks to Dr. Priya . She is a great and professional doctor ",
-                                // style: TextStyle(
-                                //   color: Colors.black,
-                                // ),
-                                // ),
+                                  padding: EdgeInsets.symmetric(horizontal: 10),
+                                  child: Text(
+                                    "Many thanks to Dr. Priya . She is a great and professional doctor",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  // child: Text(
+                                  //   maxLines:2, // use for line limitation
+                                  //   overflow: TextOverflow.ellipsis,
+                                  //   "Many thanks to Dr. Priya . She is a great and professional doctor ",
+                                  // style: TextStyle(
+                                  //   color: Colors.black,
+                                  // ),
+                                  // ),
                                 ),
-
                               ],
                             ),
-                          ),
-
                           );
-
-                    },
+                        },
+                      ),
                     ),
                   ),
-                  // SizedBox(height: 35),
-                  // ElevatedButton(
-                  //   onPressed: () {
-                  //     // Navigator.push(context, MaterialPageRoute(
-                  //     //     builder: (context) => MyButton()
-                  //     // ));
-                  //     // Implement save functionality
-                  //   },
-                  //   child: Text('Near by Hospital '),
-                  //
-                  //
-                  // ),
                   SizedBox(height: 20),
-                  Text("Prescription",
+                  Text(
+                    "Prescription",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(height: 8),
-                  Text("Here you will get prescription by Doctor",
-                  style: TextStyle(color: Colors.deepPurple,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 15),),
+                  Text(
+                    "Here you will get prescription by Doctor",
+                    style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                    ),
+                  ),
                   SizedBox(height: 35),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(
-                          builder: (context) =>PrescriptionApp()
-                      ));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PrescriptionApp()));
                       // Implement save functionality
                     },
                     child: Text('Your Prescription'),
-
-
                   ),
-
-                  // ListTile(
-                  //   leading: Container(
-                  //     padding: EdgeInsets.all(10),
-                  //     decoration: BoxDecoration(
-                  //       color: Color(0xFFF0EEFA),
-                  //       shape: BoxShape.circle
-                  //   ),
-                  //     child:Icon(
-                  //
-                  //       Icons.location_on,
-                  //       // icon of location on
-                  //       color: Colors.red,
-                  //       size: 30,
-                  //     ),
-                  // ),
-                  //   title: Text(
-                  //
-                  //     "Bhopal, Sagar Multispeciality Hospital",
-                  //     style: TextStyle(
-                  //       fontWeight: FontWeight.bold,
-                  //       fontSize: 15,
-                  //
-                  //
-                  //     ),
-                  //   ),
-                  //   subtitle: Text("Hospital in Bhopal Madhya Pradesh"),
-                  // ),
-                  Divider(height: 10),
-      ],
+                ],
+              ),
+            ),
+          ],
         ),
-       ),
-      ],
-     ),
-    ),
+      ),
       bottomNavigationBar: Container(
         padding: EdgeInsets.all(15),
         height: 135,
         decoration: BoxDecoration(
-          color: Colors.deepPurple.shade100,
+          color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.black54,
@@ -359,46 +328,54 @@ Text("Hi I am MBBS specialist and I have 10 years of Experience in Medical feild
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Consultation Price",
-                style: TextStyle(
-                  color: Colors.black54,
+                Text(
+                  "Consultation Price",
+                  style: TextStyle(
+                    color: Colors.black54,
+                  ),
                 ),
-                ),
-                Text("\$100",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold,
-                ),
+                Text(
+                  "\$100",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black54,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
             SizedBox(height: 15),
             InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => BookAppointmentScreen()
-                     ));
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BookAppointmentScreen(),
+                  ),
+                );
               },
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.symmetric(vertical: 18),
-                decoration: BoxDecoration(
-                  color: Colors.purple.shade700,
-                ),
-                child: Center(
-                  child: Text("Book Appointment",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                  ),),
+              child: ClipOval(
+                child: Container(
+                  width: 50, // Adjust the width as needed for the desired size
+                  height: 50, // Adjust the height as needed for the desired size
+                  decoration: BoxDecoration(
+                    color: Colors.purple.shade700,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.calendar_today,
+                      color: Colors.white,
+                      size: 30, // Adjust the icon size as needed
+                    ),
+                  ),
                 ),
               ),
             ),
+
           ],
         ),
       ),
-   );
+    );
   }
- }
+}

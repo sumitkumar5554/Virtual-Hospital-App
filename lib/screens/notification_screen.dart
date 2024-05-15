@@ -5,14 +5,14 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notifications',
+        title: const Text('Notifications',
         style: TextStyle(
           color: Colors.white,
         ),),
         backgroundColor: Colors.deepPurple,
       ),
       body: ListView(
-        children: [
+        children: const [
           NotificationItem(
             icon: Icons.notifications,
             name: 'Dr. Abhishek',

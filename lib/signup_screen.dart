@@ -19,6 +19,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
   bool passToggle = true;
 
   Future<void> _createAccount() async {
+    if (_fullNameController.text.isEmpty ||
+        _emailController.text.isEmpty ||
+        _phoneController.text.isEmpty ||
+        _passwordController.text.isEmpty) {
+      // Show an error message or toast indicating that all fields are required
+      return;
+    }
+
     try {
       UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
         email: _emailController.text,
@@ -30,7 +38,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         'fullName': _fullNameController.text,
         'email': _emailController.text,
         'phone': _phoneController.text,
-        //add type a a user or doctor
+        // Add type as a user or doctor
       });
 
       // Navigate to login screen after successful signup
