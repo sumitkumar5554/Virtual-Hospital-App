@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:virtual_swaahth/doctor_appointmentscreen.dart';
 import 'package:virtual_swaahth/home_screen.dart';
 import 'package:virtual_swaahth/screens/about_us.dart';
+import 'package:virtual_swaahth/screens/feedback_screen.dart';
 import 'package:virtual_swaahth/screens/logout_screen.dart';
 import 'package:virtual_swaahth/screens/notification_screen.dart';
 import 'package:virtual_swaahth/screens/privacy_screen.dart';
@@ -178,6 +179,33 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
               title: Text("About Us",
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
+                ),
+              ),
+              trailing: Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            SizedBox(height: 20),
+            ListTile(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => FeedbackScreen()
+                ));
+              },
+              leading: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple.shade100,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  Icons.feedback_outlined, // icon for feedback us
+                  color: Colors.deepPurpleAccent.shade700,
+                  size: 35,
+                ),
+              ),
+              title: Text("Feedback",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 20,

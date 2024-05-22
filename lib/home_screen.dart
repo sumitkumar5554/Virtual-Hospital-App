@@ -314,35 +314,38 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15),
-          Row(
-            children: [
-              const Text(
-                "Popular Doctors",
-                style: TextStyle(
-                  fontSize: 23,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black54,
-                ),
-              ),
-              const SizedBox(width: 10),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ChatBot(),
-                    ),
-                  );
-                },
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 160),
-                  child: Icon(
-                    Icons.question_answer_outlined,
-                    color: Colors.blue,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                const Text(
+                  "Popular Doctors",
+                  style: TextStyle(
+                    fontSize: 23,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black54,
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(width: 10),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChatBot(),
+                      ),
+                    );
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 160),
+                    child: Icon(
+                      Icons.question_answer_outlined,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

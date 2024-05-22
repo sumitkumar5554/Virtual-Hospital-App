@@ -9,7 +9,7 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('About Page', style: GoogleFonts.lato()), // Custom font
-        backgroundColor: Colors.blue, // App bar background color
+        backgroundColor: Colors.yellow, // App bar background color
       ),
       body: Container(
         color: Colors.white54, // Background color of the page
@@ -56,7 +56,7 @@ class AboutPage extends StatelessWidget {
               SizedBox(height: 20.0),
               Center(
                 child: Text(
-                  'This App is Made by Sumit Kumar and Team - ',
+                  'Developers Information  - ',
                   style: GoogleFonts.poppins(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -64,18 +64,18 @@ class AboutPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _buildDeveloperColumn('Sumit Kumar (Lead)', 'sumitkumar11@gmail.com','assets/images/profile.png'),
+                  _buildDeveloperColumn('Sumit Kumar (Lead)', 'sumitk11455@gmail.com','images/sumit.jpeg'),
                 ],
               ),
               SizedBox(height: 10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _buildDeveloperColumn('Utkarsh Dubey', 'utkarshdubey1303@gmail.com','assets/images/profile.png'),
+                  _buildDeveloperColumn('Utkarsh Dubey', 'utkarshdubey1303@gmail.com','images/utkarsh.jpeg'),
                 ],
               ),
               SizedBox(height: 10.0),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_swaahth/screens/chat_screen.dart';
 
+
 class MessagesScreen extends StatelessWidget {
 
   List imgs = [
@@ -18,8 +19,8 @@ class MessagesScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 40),
-          Padding(
+          const SizedBox(height: 40),
+          const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text("Message",
           style: TextStyle(
@@ -29,16 +30,16 @@ class MessagesScreen extends StatelessWidget {
           ),
           ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
-                BoxShadow(
+                const BoxShadow(
                   color: Colors.black12,
                   blurRadius: 10,
                   spreadRadius: 2,
@@ -50,7 +51,7 @@ class MessagesScreen extends StatelessWidget {
               children: [
                 Container(
                   width: 300,
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: TextField(
                       decoration: InputDecoration(
@@ -61,16 +62,16 @@ class MessagesScreen extends StatelessWidget {
                   ),
 
                 ),
-                Icon(Icons.search,
+                const Icon(Icons.search,
                 color: Colors.deepPurpleAccent,
                 ),
               ],
             ),
           ),
           ),
-          SizedBox(height: 20), // for the bubble image circle
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20), // for managing in horizontally text
+          const SizedBox(height: 20), // for the bubble image circle
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20), // for managing in horizontally text
             child: Text(
               "Active Now",
             style:TextStyle(
@@ -79,7 +80,7 @@ class MessagesScreen extends StatelessWidget {
             ) ,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           SizedBox(height: 90,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -87,10 +88,10 @@ class MessagesScreen extends StatelessWidget {
               shrinkWrap: true,
               itemBuilder: (context, index){
                 return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 12),
+                  margin: const EdgeInsets.symmetric(horizontal: 12),
                   width: 65,
                   height: 65,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.white,
                     boxShadow: [
@@ -114,16 +115,16 @@ class MessagesScreen extends StatelessWidget {
                       ),
                       ),
                       Container(
-                        margin: EdgeInsets.all(4),  // margin position of small green dot
-                        padding: EdgeInsets.all(3),
+                        margin: const EdgeInsets.all(4),  // margin position of small green dot
+                        padding: const EdgeInsets.all(3),
                         height: 20,   // size of Available online circle
                         width: 20,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.green,
                             shape: BoxShape.circle,
                           ),
@@ -137,8 +138,8 @@ class MessagesScreen extends StatelessWidget {
 
           ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20), // for managing in horizontally text
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20), // for managing in horizontally text
             child: Text(
               "Recent Chat",
               style:TextStyle(
@@ -147,9 +148,9 @@ class MessagesScreen extends StatelessWidget {
               ) ,
             ),
           ),
-          SizedBox(height: 10), // for below Active now size
+          const SizedBox(height: 10), // for below Active now size
           ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
           itemCount: 7,
           shrinkWrap: true,
           itemBuilder: (context, index){
@@ -160,7 +161,7 @@ class MessagesScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ChatScreen(),  // call ChatScreen from here////////////////////////////////////////////////////////////////
+                            builder: (context) => const ChatScreen(),  // call ChatScreen from here////////////////////////////////////////////////////////////////
                           ));
                     },
                     leading: CircleAvatar(
@@ -169,14 +170,14 @@ class MessagesScreen extends StatelessWidget {
                         "images/${imgs[index]}",
                       ),
                     ),
-                    title: Text(
+                    title: const Text(
                       "Dr Mohit Rathod",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text(
+                    subtitle: const Text(
                       "Hello, Doctor are you there?",
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -185,7 +186,7 @@ class MessagesScreen extends StatelessWidget {
                         color: Colors.black54,
                       ),
                     ),
-                    trailing: Text("12:30",
+                    trailing: const Text("12:30",
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.black54,

@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:virtual_swaahth/home_screen.dart';
-import 'package:virtual_swaahth/screens/messages_screen.dart';
-import 'package:virtual_swaahth/screens/schedule_screen.dart';
-import 'package:virtual_swaahth/screens/settings_screen.dart';
+import 'package:virtual_swaahth/navbar%20screen/messages_screen.dart';
+import 'package:virtual_swaahth/navbar%20screen/schedule_screen.dart';
+import 'package:virtual_swaahth/navbar%20screen/settings_screen.dart';
+
 
 class NavBarRoots extends  StatefulWidget{
   @override

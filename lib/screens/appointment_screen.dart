@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:virtual_swaahth/call_sos_button.dart';
-import 'package:virtual_swaahth/googlemap_screen.dart';
+import 'package:virtual_swaahth/screens/call_sos_button.dart';
 import 'package:virtual_swaahth/screens/make_appointment.dart';
 import 'package:virtual_swaahth/screens/prescription_service.dart';
 import 'package:virtual_swaahth/widgets/video_call.dart';

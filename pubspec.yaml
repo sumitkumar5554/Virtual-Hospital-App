@@ -55,6 +55,15 @@ dependencies:
   get: ^4.6.6
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
+  flutter_hooks: ^0.20.5
+  firebase_storage: ^11.7.5
+  firebase_messaging: ^14.9.2
+  snackbar: ^1.0.2
+  http: ^1.2.1
+  emoji_picker_flutter: ^2.2.0
+  contacts_service: ^0.6.3
+  flutter_rating_bar: ^4.0.1
+  
 
 
 

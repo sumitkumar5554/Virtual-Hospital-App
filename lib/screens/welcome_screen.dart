@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:virtual_swaahth/admin_panel/doctor_signup.dart';
-import 'package:virtual_swaahth/home_screen.dart';
+import 'package:virtual_swaahth/admin_panel/admin_login.dart';
 import 'package:virtual_swaahth/login_screen.dart';
-import 'package:virtual_swaahth/navbar_roots.dart';
 import '../signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -174,10 +172,10 @@ class WelcomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SignupForm(),
+                            builder: (context) => AdminLoginPage(),//admin signup page
                           ),
                         );
-                        // Implement navigation to admin login screen
+                        //Implement navigation to admin login screen
                       },
                       child: const Row(
                         children: [
